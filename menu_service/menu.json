@@ -1,0 +1,50 @@
+{
+    "id": "mpm_menu",
+    "icon": null,
+    "label": "Mobile Profile Management",
+    "url": null,
+    "children": [
+    {
+        "id": "mpm_profile_summary",
+        "icon": null,
+        "label": "Profile Summary",
+        "url": "/profile-summary",
+        "children": []
+    },
+    {
+        "id": "mpm_usage_statistics",
+        "icon": null,
+        "label": "Usage Statistics",
+        "url": "/usage-statistics",
+        "children": []
+    },
+    {
+        "id": "mpm_operator_statistics",
+        "icon": null,
+        "label": "Operator Statistics",
+        "url": "/operator-statistics",
+        "children": []
+    },
+    {
+        "id": "mpm_apn_statistics",
+        "icon": null,
+        "label": "APN Statistics",
+        "url": "/apn-statistics",
+        "children": []
+    },
+    {
+        "id": "mpm_device_statistics",
+        "icon": null,
+        "label": "Device Statistics",
+        "url": "/device-statistics",
+        "children": []
+    },
+    {
+        "id": "mpm_detailed_report",
+        "icon": null,
+        "label": "Detailed Report",
+        "url": "/detailed-report",
+        "children": []
+    }
+    ]
+}

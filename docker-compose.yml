@@ -40,6 +40,16 @@ services:
       - 5001:5001
     restart: on-failure
 
+  # Retrieves the menu Json
+  menu-service:
+    image: menu-service
+    container_name: meun-service
+    build:
+      context: ./menu_service
+    ports:
+      - 8081:8081
+    restart: on-failure
+
 
   # Generates a precipitation estimate
   precip-service:
