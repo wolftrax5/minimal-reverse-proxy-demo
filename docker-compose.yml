@@ -1,16 +1,15 @@
-version: '3'
+version: "3"
 
 services:
-
   # Proxies requests to internal services
   reverse-proxy:
     image: nginx:1.17.10
-    container_name: reverse_proxy_demo
+    container_name: reverse_proxy_demonohash
     depends_on:
-        - weather-report
-        - temperature-service
-        - precip-service
-        - angular-app
+      - weather-reportnohash
+      - temperature-servicenohash
+      - precip-servicenohash
+      - angular-appnohash
     volumes:
       - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
     ports:
@@ -19,21 +18,20 @@ services:
   # generates weather reports
   weather-report:
     image: weather-report
-    container_name: weather-report
+    container_name: weather-reportnohash
     build:
       context: ./weather_report
     depends_on:
-        - temperature-service
-        - precip-service
+      - temperature-service
+      - precip-service
     ports:
       - 8080:80
     restart: on-failure
 
-
   # Retrieves the temperature
   temperature-service:
     image: temperature-service
-    container_name: temperature-service
+    container_name: temperature-servicenohash
     build:
       context: ./temperature_service
     ports:
@@ -43,18 +41,17 @@ services:
   # Retrieves the menu Json
   menu-service:
     image: menu-service
-    container_name: meun-service
+    container_name: menu-servicenohash
     build:
       context: ./menu_service
     ports:
       - 8081:8081
     restart: on-failure
 
-
   # Generates a precipitation estimate
   precip-service:
     image: precip-service
-    container_name: precip-service
+    container_name: precip-servicenohash
     build:
       context: ./precip_service
     ports:
@@ -63,8 +60,8 @@ services:
 
   # angular app
   angular-app:
-    image: angular-app:latest
-    container_name: angular-app
+    image: wolftrax/nohash_ngnx:latest
+    container_name: angular-appnohash
     ports:
       - 5003:80
     restart: on-failure
