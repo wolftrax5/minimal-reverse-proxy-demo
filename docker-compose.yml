@@ -1,16 +1,15 @@
-version: '3'
+version: "3"
 
 services:
-
   # Proxies requests to internal services
   reverse-proxy:
     image: nginx:1.17.10
     container_name: reverse_proxy_demo
     depends_on:
-        - weather-report
-        - temperature-service
-        - precip-service
-        - angular-app
+      - weather-report
+      - temperature-service
+      - precip-service
+      - angular-app
     volumes:
       - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
     ports:
@@ -23,12 +22,11 @@ services:
     build:
       context: ./weather_report
     depends_on:
-        - temperature-service
-        - precip-service
+      - temperature-service
+      - precip-service
     ports:
       - 8080:80
     restart: on-failure
-
 
   # Retrieves the temperature
   temperature-service:
@@ -43,13 +41,12 @@ services:
   # Retrieves the menu Json
   menu-service:
     image: menu-service
-    container_name: meun-service
+    container_name: menu-service
     build:
       context: ./menu_service
     ports:
       - 8081:8081
     restart: on-failure
-
 
   # Generates a precipitation estimate
   precip-service:
@@ -63,7 +60,7 @@ services:
 
   # angular app
   angular-app:
-    image: angular-app:latest
+    image: wolftrax/mpm_to_deploy:latest
     container_name: angular-app
     ports:
       - 5003:80
