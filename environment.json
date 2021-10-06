@@ -1,0 +1,16 @@
+{
+    "env":"development-docker",
+    "production":false,
+    "menuLocation":"/mobile-profile-management/assets/portal-menu.json",
+    "dossierEmbeddingLibUrl":"https://symphony-dev.dalab.syniverse.com/ubinalib/javascript/embeddinglib.js",
+    "dossierPageMap":{
+       "/profile-summary":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/DF5E84C3A041CF0FBC504E96522E0EF6",
+       "/usage-statistics/imsi-count":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/C6F56338634D0F977B8061B95772A60E",
+       "/usage-statistics/sdr-charge":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/8AD979C916494D64B5442FA7617E74A3",
+       "/operator-statistics":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/BD0ED03C8C409FD50C8045ABDEDD34A0",
+       "/apn-statistics":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/2AB3CA32F644BD0638263DB9EB7C1424",
+       "/device-statistics":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/9E8D16C7EF4D9528DB965D839E36C7A5",
+       "/detailed-report":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/7A19121A2E4322D6F3F59584A7F452F1",
+       "/imsi-lookup":"https://da3d-gen-mst-tcs001.dalab.syniverse.com:8444/MicroStrategyLibrary/app/0293B65611EBCECE98320080EFC50108/50540543441FC059C79D04B45D824E02"
+    }
+ }
